@@ -24,6 +24,14 @@ npm i -D typescript @types/express @types/node
 npx tsc --init
 ```
 
+For parsing request data based on content-type header we need the `body-parser` library:
+
+```bash
+npm install body-parser
+
+npm i -D @types/body-parser
+```
+
 ## Up and Running
 
 First you need to create `.env` as follows:
@@ -36,4 +44,19 @@ Then build:
 
 ```bash
 npm run build
+```
+
+And, run the code:
+
+```bash
+npm start
+```
+
+## Development
+
+Running all above commands each time you change something takes time. So you can use the `dev` command
+as follows:
+
+```bash
+npm run dev
 ```
