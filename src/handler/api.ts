@@ -6,6 +6,8 @@ export class API {
   }
 
   replace(req: Request, res: Response) {
-    console.log(req.body());
+    const input = req.body;
+    const output = input;
+    res.json(output);
   }
 }
