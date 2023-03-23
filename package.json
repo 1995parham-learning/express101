@@ -1,0 +1,20 @@
+{
+  "name": "express101",
+  "version": "1.0.0",
+  "description": "Let's learn Express with Redis and Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1995parham-learning/express101.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/1995parham-learning/express101/issues"
+  },
+  "homepage": "https://github.com/1995parham-learning/express101#readme"
+}
