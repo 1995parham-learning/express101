@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import { API } from "./src/handler/api";
 import { config } from "./src/config/config";
 
-const app: Express = express();
+export const app: Express = express();
 
 app.use(bodyParser.json()); // for parsing application/json content-type header
 
