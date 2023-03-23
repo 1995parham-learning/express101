@@ -7,7 +7,24 @@ export class API {
 
   replace(req: Request, res: Response) {
     const input = req.body;
-    const output = input;
-    res.json(output);
+
+    API.traverse(input, "Elahe", "Parham");
+
+    res.json(input);
+  }
+
+  static traverse(
+    input: { [index: string]: any },
+    target: string,
+    replaced: string
+  ) {
+    for (const [key, value] of Object.entries(input)) {
+      if (value === target) {
+        input[key] = replaced;
+      }
+      if (typeof value == "object") {
+        API.traverse(input[key], target, replaced);
+      }
+    }
   }
 }
