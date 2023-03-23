@@ -1,14 +1,20 @@
 import { Request, Response, Router } from "express";
 
 export class API {
-  constructor(router: Router) {
+  target: string;
+  replaced: string;
+
+  constructor(router: Router, target: string, replaced: string) {
     router.post("/replace", this.replace);
+
+    this.target = target;
+    this.replaced = replaced;
   }
 
   replace(req: Request, res: Response) {
     const input = req.body;
 
-    API.traverse(input, "Elahe", "Parham");
+    API.traverse(input, this.target, this.replaced);
 
     res.json(input);
   }
