@@ -2,8 +2,6 @@ import path from "path";
 import dotenv from "dotenv";
 import joi from "joi";
 
-console.log(process.env.NODE_ENV);
-
 dotenv.config({
   path: path.resolve(
     process.cwd(),
