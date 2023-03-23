@@ -5,7 +5,7 @@ export class API {
   replaced: string;
 
   constructor(router: Router, target: string, replaced: string) {
-    router.post("/replace", this.replace);
+    router.post("/replace", this.replace.bind(this));
 
     this.target = target;
     this.replaced = replaced;
