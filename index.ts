@@ -1,16 +1,5 @@
-import express, { Express } from "express";
-import bodyParser from "body-parser";
-import { API } from "./src/handler/api";
 import { config } from "./src/config/config";
-
-export const app: Express = express();
-
-app.use(bodyParser.json()); // for parsing application/json content-type header
-
-const router = express.Router();
-
-new API(router, config.target, config.replaced);
-app.use("/api", router);
+import { app } from "./src/app/app";
 
 app.listen(config.port, () => {
   console.log(

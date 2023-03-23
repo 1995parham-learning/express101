@@ -1,7 +1,15 @@
+import path from "path";
 import dotenv from "dotenv";
 import joi from "joi";
 
-dotenv.config();
+console.log(process.env.NODE_ENV);
+
+dotenv.config({
+  path: path.resolve(
+    process.cwd(),
+    process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env"
+  ),
+});
 
 interface Config {
   port: number;
