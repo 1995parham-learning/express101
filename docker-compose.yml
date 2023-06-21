@@ -1,0 +1,11 @@
+version: "3"
+services:
+  main:
+    build: .
+    environment:
+      PORT: 8080
+    volumes:
+      - .:/usr/express101
+    command: npm run dev
+    ports:
+      - 8080:8080
