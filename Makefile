@@ -14,4 +14,7 @@ lint: install
 test: install
 	npm run test
 
+dev:
+	docker compose up
+
 .phony: install build lint update
