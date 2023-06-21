@@ -1,10 +1,17 @@
 install:
 	npm install
 
-build: install
+build: install dist
+
+dist:
 	npm run build
 
 update:
 	npm update
 
-.phony: install build
+lint: install
+	@rm -rf dist || true
+	npx eslint .
+
+
+.phony: install build lint update
