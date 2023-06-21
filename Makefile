@@ -11,7 +11,6 @@ lint: install
 	@rm -rf dist || true
 	npx eslint .
 
-
 test: install
 	npm run test
 
