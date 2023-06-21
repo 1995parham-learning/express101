@@ -1,9 +1,7 @@
 install:
 	npm install
 
-build: install dist
-
-dist:
+build: install
 	npm run build
 
 update:
