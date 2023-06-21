@@ -12,4 +12,7 @@ lint: install
 	npx eslint .
 
 
+test: install
+	npm run test
+
 .phony: install build lint update
