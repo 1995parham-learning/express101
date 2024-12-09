@@ -22,7 +22,7 @@
   "homepage": "https://github.com/1995parham-learning/express101#readme",
   "dependencies": {
     "body-parser": "^2.0.2",
-    "dotenv": "^16.4.6",
+    "dotenv": "^16.4.7",
     "express": "^4.21.1",
     "joi": "^17.13.3"
   },
